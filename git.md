@@ -286,3 +286,8 @@ git remote -v
 ```git
 git push origin <main-branch>
 ```
+
+### Set the upstream branch
+```git 
+git push -u origin <main-branch>
+```
