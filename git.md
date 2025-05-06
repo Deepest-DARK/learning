@@ -271,8 +271,18 @@ git tag -d <tag-name>
 ```
 
 ## Push to remote (GitHub)
-### sending your commits from your local repository to a remote repository
 
+### setting up connection
+```git
+git remote add origin <repository-url>
+```
+
+### View changes
+```git 
+git remote -v
+```
+
+### Sending your commits from your local repository to a remote repository
 ```git
 git push origin <main-branch>
 ```
