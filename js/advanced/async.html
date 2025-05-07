@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>async</title>
+</head>
+
+<body>
+
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <div id="hexCode"></div>
+
+    <script>
+
+        // setTimeout() , it will run after the given time frame
+        let timeout;
+        // function startTimeout() {
+        //     timeout = setTimeout(() => { // need a function reference or callback or handler
+        //         console.log("log after 1 sec")
+        //     }, 1000)
+        // }
+        // function stopTimeout() {
+        //     clearTimeout(timeout)  // need reference
+        // }
+        // document.getElementById('start').addEventListener('click', startTimeout)
+        // document.getElementById('stop').addEventListener('click', stopTimeout)
+
+        // setInterval()  , run for after every given time frame    
+
+        const randomColor = () => {
+            const hex = '0123456789ABCDEF'
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16  )]
+            }
+            return color;
+        }
+
+        function startInterval() {
+            timeout = setInterval(() => {
+                const hex = randomColor()
+                document.getElementById('hexCode').innerText = hex
+                document.body.style.backgroundColor = hex
+            }, 1000)
+        }
+
+        function stopInterval(){
+            clearInterval(timeout)
+        }
+
+        document.getElementById('start').addEventListener('click', startInterval)
+        document.getElementById('stop').addEventListener('click', stopInterval)
+
+    </script>
+</body>
+
+</html>

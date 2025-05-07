@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical </title>
+</head>
+
+<body>
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <script>
+        // lexical 
+        // function outer() {
+        //     let username = 'vivaan'
+        //     function inner() {
+        //         // you can access the username that is lexical scope
+        //         console.log('inner : ', username)
+        //     }
+        //     inner()
+        // }
+        // outer()
+        // console.log('outer : ',username)  // give error , username is not defined
+
+        // closure
+
+        // function makeFunc() {
+        //     console.log("inside makeFunc")
+        //     const name = 'vivaan'
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     return displayName;   // it will return the whole outer scope
+        // }
+        // const myFunc = makeFunc();
+        // myFunc()
+
+        // real life example
+        // function clickHandler(color){
+        //     return function(){
+        //         document.body.style.backgroundColor = color
+        //     }
+        // }
+
+        // document.getElementById('red').onclick = clickHandler('red')  // it need a reference so in the clickHandler function it is returning a function refernce
+        // document.getElementById('green').onclick = clickHandler('green')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #212121; color:white">
+    <ol id="images" style="list-style: none; ">
+        <li id="wukong"><img src="./images/Black Myth Wukong.jpg" width="400px" alt=""></li>
+        <li id="tsushima"><img src="./images/Ghost Of Tsushima.jpg" width="400px" alt=""></li>
+        <li id="god"><img src="./images/God Of War.webp" width="400px" alt=""></li>
+        <li id="spider-man"><img src="./images/Spider-Man Miles Morales.png" width="400px" alt=""></li>
+        <li id="elder-ring"><img src="./images/ELDEN RING.jpg" width="400px" alt=""></li>
+        <li id="sekiro"><img src="./images/Sekiro™ Shadows Die Twice.jpg" width="400px" alt=""></li>
+        <!-- <li id="sekiro"><img src="./images/Sekiro™ Shadows Die Twice.jpg" width="400px" alt="" onclick="console.log('sekiro clicked')"></li> -->
+        <!-- not recommended -->
+        <li><a id="google" href="https://google.com" target="_blank">google</a></li>
+    </ol>
+
+    <script>
+        // document.getElementById('sekiro').onclick = function () {
+        // console.log("sekiro clicked")    // also not recommended because it only give click functionality
+        // }
+
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log("inside the ul")
+        // },true)
+        // document.getElementById('sekiro').addEventListener('click',function(e){
+        //     console.log("inside the sekiro")
+        // },true)
+
+        // what does the third argument means (true or false) ?
+        // if its false that is by-default , it will first log the inside the sekiro then log the inside the ul
+        // if its true then first inside the ul will log and then inside the sekiro
+        // its even propogation (bubbling up) it goes from below to top ,
+        // we click in li that is inside the ul so first li will be log then ul 
+        // but we can change the behaviour if we set it to true
+        // then first ul will log and then li 
+
+
+        // sometimes we don't want the bubble effect
+        // so for that we use e.stopPropogation()
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log("inside the ul")
+        // })
+        // document.getElementById('sekiro').addEventListener('click',function(e){
+        //     console.log("inside the sekiro")
+        //     e.stopPropagation()
+        // })
+
+
+        // preventDefault use to stop its default behavior
+        // document.getElementById('google').addEventListener('click', function (e) {
+        //     e.preventDefault()
+        //     console.log("inside the google")
+        // })
+        // clicking on google doesn't open the google page, because we stop its behavior 
+
+        document.getElementById('images').addEventListener('click', function (e) {
+            if (e.target.tagName == "IMG") {
+                const removeIt = e.target.parentNode;
+                console.log(removeIt)
+                // removeIt.removeChild(e.target)
+                removeIt.remove()
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
