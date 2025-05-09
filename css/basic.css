@@ -1,0 +1,215 @@
+/* box sizing */
+/* 
+body{
+    background-color:rgba(172, 176, 179, 0.966);
+    margin-left: 100px;
+} */
+
+/* content-box its defautl box sizing*/
+/* its width will get bigger total width : 600 + 15 + 10  */
+/* .box-1 {
+    box-sizing: content-box; 
+    width: 600px;
+    height: 250px;
+    background: #ebb4b4;
+
+    padding: 15px;
+    border: 10px solid black;
+
+} */
+
+/* border-box */
+/* it width will remain same total width : 600 */
+/* .box-2 {
+    box-sizing: border-box;
+    width: 600px;
+    height: 250px;
+    background: #95d7e7;
+    
+    padding: 15px;
+    border: 10px solid black;
+} */
+
+
+
+/* sizing units */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+/* .box-1{
+    the width is of this will be 1366 px in every devices
+    width: 1366px; 
+    background-color: #a34;
+} */
+
+/* .box-2{
+    it means 10 % of the view port of that device
+    width: 10vw;
+    margin auto will give equal margin to the left and right resuld will be a center div , only work for the block level element
+    margin: auto;
+    it means 100 % of the view port so it will take the 100 % in every devices
+    width: 100vw;
+    background-color: #4ad;
+} */
+
+/* vh , same as vw but in view height */
+
+/* now comes the rem and em */
+/* html also know as root element */
+/* rem inherite the root while rm inherite the parent */
+/* html{
+    font-size: 10px;
+} */
+
+/* .container{
+    background-color: #ef2;
+    padding: 20px;
+    rem means that times of the root elemnt (html) result 20px
+    font-size: 2rem
+} */
+
+/* .container > p{
+    em means that time of the parent element so in here 2 time of parent elemnet result 40 px
+    font-size: 2em;   
+    0.5 times result 10px
+    font-size: 0.5em;   
+} */
+
+/* vmin and vmax */
+/* vmin is minimum of pc and mobile */
+/* 80vmin */
+/* in pc height is smaller so it will be same as 80vh*/
+/* in mobile width is smaller so it will be same as 80vw */
+
+/* 60vmax */
+/* in pc width is bigger so it will be same as 60vw */
+/* in mobile height is bigger so it will be same as 60vh */
+
+/* selectors */
+/* element selector : select every element of same type */
+/* div{
+    background-color: green;
+} */
+/*  use . for class use # for id */
+
+/* child selector : it will select every child of that element , note it shoudl be the direct child of the contianer not inside any other element */
+/* .container > p{
+    background-color: green;
+} */
+
+/* descendent selector : if p is present inside container doesnt' matter if it is present inside a element or not */
+/* .container p {
+    background-color: red;
+} */
+
+/* universal selector : it will be give css to every element */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+/* Pseudo selector */
+/* a:visited {
+    background-color: yellow;
+} */
+
+/* .container:hover{
+    cursor: pointer;
+} */
+
+/* it will select evey p which is fist child of its parent */
+/* p:first-child{
+    background-color: red;
+} */
+
+/* nth-child also ther is nth-last-child that count from below , note : it count form 1 not 0 */
+/* .boxes:nth-child(even){
+    color: darkorchid;
+} */
+
+/* .boxes *{
+    color:aqua;
+} */
+
+/* to select a custom attribute */
+/* [custom-att="primary"]{
+    color: red;
+} */
+
+/* can we use that in class ? , absolutely!!! */
+/* [class = "box"]{ 
+    background-color: green;
+} */
+
+/* multiple element selector */
+
+/* a,main{
+    color: brown;
+} */
+
+/* :: 	Pseudo-element */
+/* befor and after */
+/* insert content before and after the element */
+/* .boxes::before{
+    content: "i am good";
+    background-color: red;
+} */
+
+/* .boxes::after{
+    content: "students are good";
+    background-color: green ;
+} */
+
+/* ::selection{
+    color: aquamarine;
+    background-color: black;
+} */
+
+/* set up variable */
+/* css variable can hold anything like px */
+/* :root {
+    --primary-color: rgb(34, 233, 120);
+    --secondary_color: #ab2;
+} */
+
+/* main {
+    background-color: var(--secondary-color);
+} */
+
+/* position property */
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+/* relative give ability to move top,bottom,left,right */
+/* .parent {
+    border: solid 2px black;
+    position: absolute;
+    top: 90px;
+    left: 10px;
+
+} */
+
+/* absolute will be nearest position ancestor : like absolute,fixed , sticky or root(html) but not static*/
+/* .box:first-child{
+    background-color: red;
+    position: absolute;
+    top: 0;
+} */
+
+/* fixed : it will be fixed on the screen */
+/* main{
+    position: fixed;
+    background-color: red;
+} */
+
+/* sticky it will stick to the  */
+/* main{
+    position: sticky;
+    background-color: green;
+    top: 10px;
+} */
