@@ -1,0 +1,5 @@
+camelCase     : users , getUserData     , usedIn : java , javascript
+PascalCase    : Users , GetUserData     , usedIn : c# , React
+snake_case    : users , get_user_data   , usedIn : Python , c/c++
+kebab-case    : users , get-user-data   , usedIn : HTML , CSS 
+Dot Notation  : users , get.user.data   , usedIn : JavaScript/TypeScript
