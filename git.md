@@ -262,22 +262,22 @@ git diff <branch1>..<branch2>
 
 ## Tags
 
-#### create a new tag
+### create a new tag
 ```git
 git tag <tag-name>
 ```
 
-#### to view all the tags
+### to view all the tags
 ```git
 git tag
 ```
 
-#### creates an annotated tag
+### creates an annotated tag
 ```git
 git tag -a first <commit-sha-hash> -m "your_message"
 ```
 
-#### delete a tag
+### delete a tag
 ```git
 git tag -d <tag-name>
 ```
