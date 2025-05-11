@@ -1,0 +1,44 @@
+frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/             # Images, icons, fonts
+│   ├── components/         # Reusable UI components (Button, Card, etc.)
+│   ├── features/           # Feature-specific components and logic
+│   │   ├── auth/           # Login, Register, etc.
+│   │   └── chat/           # ChatBox, MessageList, etc.
+│   ├── pages/              # Route-level pages (Home, Profile, etc.)
+│   ├── store/              # Global state (Redux, Zustand, Context)
+│   ├── router/             # React Router configuration
+│   ├── utils/              # Helper functions
+│   ├── hooks/              # Custom hooks
+│   ├── services/           # API calls (Axios functions)
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── index.html
+└── vite.config.js
+
+backend/
+├── src/
+│   ├── config/                 # DB connection, config vars
+│   │   └── db.js
+│   ├── controllers/           # Route logic
+│   │   ├── authController.js
+│   │   └── chatController.js
+│   ├── models/                # Mongoose schemas
+│   │   ├── User.js
+│   │   └── Message.js
+│   ├── routes/                # Express routes
+│   │   ├── authRoutes.js
+│   │   └── chatRoutes.js
+│   ├── middleware/            # Auth middleware, error handler, etc.
+│   │   ├── authMiddleware.js
+│   │   └── errorMiddleware.js
+│   ├── sockets/               # Socket.IO logic
+│   │   └── chatSocket.js
+│   ├── utils/                 # Utilities (e.g., validators)
+│   └── app.js                 # Express app setup
+├── server.js                  # Entry point (e.g., runs app.js)
+├── .env
+└── package.json
