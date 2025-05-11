@@ -21,24 +21,26 @@ frontend/
 
 backend/
 ├── src/
-│   ├── config/                 # DB connection, config vars
+│   ├── config/                 # DB connection & config
 │   │   └── db.js
-│   ├── controllers/           # Route logic
-│   │   ├── authController.js
-│   │   └── chatController.js
-│   ├── models/                # Mongoose schemas
-│   │   ├── User.js
-│   │   └── Message.js
-│   ├── routes/                # Express routes
-│   │   ├── authRoutes.js
-│   │   └── chatRoutes.js
-│   ├── middleware/            # Auth middleware, error handler, etc.
-│   │   ├── authMiddleware.js
-│   │   └── errorMiddleware.js
-│   ├── sockets/               # Socket.IO logic
-│   │   └── chatSocket.js
-│   ├── utils/                 # Utilities (e.g., validators)
-│   └── app.js                 # Express app setup
-├── server.js                  # Entry point (e.g., runs app.js)
-├── .env
-└── package.json
+│   ├── controllers/            # Route logic (business logic)
+│   │   ├── auth.controller.js
+│   │   └── chat.controller.js
+│   ├── models/                 # Mongoose schemas/models
+│   │   ├── user.model.js
+│   │   └── message.model.js
+│   ├── routes/                 # Express routers
+│   │   ├── auth.routes.js
+│   │   └── chat.routes.js
+│   ├── middleware/             # Middleware (auth, errors)
+│   │   ├── auth.middleware.js
+│   │   └── error.middleware.js
+│   ├── sockets/                # Socket.IO logic
+│   │   └── chat.socket.js
+│   ├── utils/                  # Helpers, validators, etc.
+│   │   └── generateToken.js
+│   └── app.js                  # Express app setup
+├── server.js                   # Entry point: runs the app & socket server
+├── .env                        # Environment variables
+├── .gitignore                  # Ignored files
+└── package.json                # Project config and dependencies
