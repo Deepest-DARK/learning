@@ -32,7 +32,7 @@ git init
 
 ### Setting the config
 
-> [!TIP]
+>[!TIP]
 >#### `--global` optional flag if you want to apply the configuration setting to all repositories for the current user
 >#### use Title Case in user.name recommended
 ```git
@@ -81,7 +81,7 @@ git restore --staged <filename1> <filename2>
 git commit -m "your_message"
 ```
 
-### log commits
+### Log commits
 ```git
 git log
 ```
@@ -103,7 +103,6 @@ git reflog <commit-hash>
 
 ### recover lost commits
 >[!CAUTION]
-
 >_mode : --hard If you want to  resets the staging area and the working directory. All uncommitted changes are lost.
 --soft Keeps changes in the staging area . Doesn't touch your working directory_
 
@@ -120,7 +119,7 @@ git reset <mode> HEAD@{<index>}
 
 ## Branches
 
-<img src="branches.png" width="500" height="300" style="background-color: white;">
+<img src="/images/branches.png" width="500" height="300" style="background-color: white;">
 
 ### View all and current branch
 
@@ -157,7 +156,20 @@ git switch -c <branch-name>
 ```git
 git checkout -b <branch-name>
 ```
-#### Delete a branch
+
+### Rename a branch
+
+>#### rename the current branch
+```git
+git branch -m <new-branch-name>
+```
+
+>#### rename a different local branch
+```git
+git branch -m <old-branch-name> <new-branch-name>
+```
+
+### Delete a branch
 ```git
 git branch -d <branch-name>
 ```
