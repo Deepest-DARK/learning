@@ -1,0 +1,125 @@
+Great — you're asking how JavaScript runs behind the scenes, step by step. Let's break it down in simple terms, focusing on the JavaScript engine and its process.
+
+🧠 Big Picture: What Runs JavaScript?
+JavaScript is executed by a JavaScript engine — like V8 (used in Chrome and Node.js), SpiderMonkey (Firefox), or JavaScriptCore (Safari).
+
+🔄 JavaScript Execution Steps (Behind the Scenes)
+1. Parsing
+JavaScript code (text) is parsed by the engine.
+
+It's turned into an Abstract Syntax Tree (AST) — a structured representation of the code.
+
+js
+Copy
+Edit
+const a = 5;
+➡ becomes structured like:
+
+scss
+Copy
+Edit
+VariableDeclaration
+  └─ Identifier (a)
+  └─ Literal (5)
+2. Compilation
+Modern engines like V8 use Just-In-Time (JIT) compilation.
+
+They convert the AST into bytecode or machine code, not just interpreting line by line.
+
+This improves performance.
+
+3. Execution
+The engine creates an Execution Context for every function or global code:
+
+Inside an Execution Context:
+Memory Creation Phase (Creation Stage):
+
+Allocates memory for:
+
+Variables → initialized with undefined
+
+Functions → loaded fully
+
+A scope is created (lexical environment).
+
+Code Execution Phase:
+
+Variables are assigned actual values.
+
+Functions are executed line by line.
+
+The Call Stack starts growing with function calls.
+
+4. Call Stack
+JavaScript is single-threaded → only one task runs at a time.
+
+Each function call is pushed onto the Call Stack.
+
+When the function finishes, it’s popped off.
+
+scss
+Copy
+Edit
+Main()
+ └─ greet()
+     └─ sayHi()
+5. Memory (Stack vs Heap)
+Primitives → Stored in the stack.
+
+Objects/Arrays/Functions → Stored in the heap, stack stores references.
+
+6. Web APIs & Event Loop (Browser Only)
+For things like:
+
+setTimeout()
+
+DOM events
+
+Fetch/network calls
+
+These go to Web APIs (handled by the browser), not the main thread.
+
+7. Callback Queue + Event Loop
+When async work (like a timer) is done, its callback goes to a callback queue.
+
+The Event Loop constantly checks:
+
+“Is the Call Stack empty?”
+
+If yes → move the next callback from the queue to the stack.
+
+🧪 Example:
+javascript
+Copy
+Edit
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+console.log("End");
+Output:
+
+sql
+Copy
+Edit
+Start
+End
+Timeout
+Even with 0 delay, the setTimeout goes to the Web API, then waits its turn via the event loop.
+
+🧩 Summary of the Flow:
+Parse → AST
+
+Compile → Bytecode
+
+Execute:
+
+Memory setup
+
+Call stack + heap
+
+Async tasks → Web APIs
+
+Event loop moves callbacks to the call stack

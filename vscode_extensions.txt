@@ -1,0 +1,23 @@
+# theme
+Vesper
+GitHub Theme
+Minimal
+poimandres
+
+# icons
+vscode-icons
+Symbols
+
+# code
+Auto Rename Tag // helps to auto rename the <div></div> 
+Prettier - Code formatter // auto formate the code
+Code Runner // create a run button to run any program
+Tailwind CSS IntelliSense // see what the class means in css
+ES7 + React/Redux/React-Native snippets // for auto completion react code
+Error Lens  // show error in pretty formate
+
+# Development Tooolkit 
+MongoDb for VS Code
+GitLens--Git supercharged
+Docker
+
