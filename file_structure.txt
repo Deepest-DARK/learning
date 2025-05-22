@@ -21,24 +21,26 @@ frontend/
 
 backend/
 ├── src/
-│   ├── config/                 # DB connection & config
+│   ├── configuration/                 # DB connection & config
 │   │   └── db.js
 │   ├── controllers/            # Route logic (business logic)
-│   │   ├── auth.controller.js
-│   │   └── chat.controller.js
+│   │   ├── authController.js
+│   │   └── chatController.js
 │   ├── models/                 # Mongoose schemas/models
-│   │   ├── user.model.js
-│   │   └── message.model.js
+│   │   ├── userModel.js
+│   │   └── messageModel.js
 │   ├── routes/                 # Express routers
 │   │   ├── auth.routes.js
 │   │   └── chat.routes.js
-│   ├── middleware/             # Middleware (auth, errors)
-│   │   ├── auth.middleware.js
-│   │   └── error.middleware.js
+│   ├── middlewares/             # Middleware (auth, errors)
+│   │   ├── authMiddleware.js
+│   │   └── errorMiddleware.js
 │   ├── sockets/                # Socket.IO logic
-│   │   └── chat.socket.js
+│   │   └── chatSocket.js
 │   ├── utils/                  # Helpers, validators, etc.
 │   │   └── generateToken.js
+│   ├── services/                  # Handling 3d-party sdk
+│   │   └── uploadToCloudinary.js
 │   └── app.js                  # Express app setup
 ├── server.js                   # Entry point: runs the app & socket server
 ├── .env                        # Environment variables
