@@ -160,7 +160,7 @@ git checkout -b <branch-name>
 ### create a branch without inheriting any history
 
 >[!NOTE]
->#### When you create a new branch in Git, it `inherits` from the currently checked-out branch — i.e., the one you're on at that moment. 
+>_When you create a new branch in Git, it `inherits` from the currently checked-out branch — i.e., the one you're on at that moment._ 
 ```git
 git checkout --orphan <new-branch-name>
 ```
