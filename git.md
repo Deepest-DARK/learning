@@ -157,6 +157,14 @@ git switch -c <branch-name>
 git checkout -b <branch-name>
 ```
 
+### create a branch without inheriting any history
+
+>[!NOTE]
+>#### When you create a new branch in Git, it `inherits` from the currently checked-out branch — i.e., the one you're on at that moment. 
+```git
+git checkout --orphan <new-branch-name>
+```
+
 ### Rename a branch
 
 >#### rename the current branch
